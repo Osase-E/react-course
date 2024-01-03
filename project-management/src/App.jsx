@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { ProjectContext, ProjectProvider } from "./store/projects-store.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+
 function App() {
   return (
-    <>
-      <h1 className="my-8 text-center text-5xl font-bold">Hello World</h1>
-    </>
+    <ProjectProvider>
+      <Dashboard />
+    </ProjectProvider>
   );
 }
 
